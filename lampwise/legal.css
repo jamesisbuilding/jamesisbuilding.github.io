@@ -1,0 +1,76 @@
+/* Lampwise privacy, terms and support pages: plain and readable, no shader, no motion.
+   From the app-website template legal.css. Colours: the landing tokens (lampwise_ui app_palette.dart). */
+:root {
+  color-scheme: light dark;
+  --bg: #FCF8F0;           /* white (cream), the card colour */
+  --surface: #F3ECDF;      /* mist-50, the paper */
+  --text: #241A1F;         /* mist-900 */
+  --muted: #5F5141;        /* mist-700, 7.0:1 on --bg */
+  --line: #E0D5C0;         /* mist-200 */
+  --link: #6E2A5F;         /* plum-700, 9.2:1 on --bg */
+  --chip-bg: #F7E7BB;      /* gilt-100, the draft notice */
+  --font: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "Literata", "Iowan Old Style", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0D0914;         /* vesper-950 */
+    --surface: #16111F;    /* vesper-900 */
+    --text: #EFEDF6;       /* vesper-50 */
+    --muted: #C0BACF;      /* vesper-200 */
+    --line: #332C40;       /* vesper-700 */
+    --link: #E8B3D9;       /* plum-200 */
+    --chip-bg: #45310B;    /* gilt-900 */
+  }
+}
+@font-face { font-family: "Literata"; src: url("/lampwise/fonts/literata.woff2") format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("/lampwise/fonts/atkinson-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("/lampwise/fonts/atkinson-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 1.0625rem/1.6 var(--font); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+::selection { background: #F2C14E; color: #241A1F; } /* gilt-400 on mist-900 */
+p, li, td, dd { text-wrap: pretty; }
+/* About 70 characters a line. */
+.wrap { max-width: 38rem; margin: 0 auto; padding: 0 16px; } /* the header and footer use the same column */
+
+.top { border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 12px; padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font: 600 1.125rem/1 var(--serif); color: var(--text); text-decoration: none; margin-right: auto; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+.top nav { display: flex; gap: 4px 16px; flex-wrap: wrap; font-size: 0.9375rem; }
+.top nav a { padding-block: 8px; }
+
+main { padding: 40px 0 56px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; text-wrap: balance; }
+h1 { font-size: clamp(2.25rem, 7vw, 3rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 8px; }
+h2 { font-size: 1.625rem; line-height: 1.2; letter-spacing: -0.01em; margin: 44px 0 12px; }
+h3 { font-size: 1.25rem; line-height: 1.25; margin: 28px 0 8px; }
+.muted { color: var(--muted); }
+.steps { padding-left: 1.25rem; }
+.steps li { margin-bottom: 8px; }
+
+.doc table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; margin: 12px 0; }
+.doc th, .doc td { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid var(--line); }
+.doc th { font-weight: 700; }
+.table-scroll { overflow-x: auto; }
+.notice { background: var(--chip-bg); color: var(--text); border-radius: 14px; padding: 12px 16px; font-weight: 700; }
+details { border-bottom: 1px solid var(--line); padding: 12px 0; }
+summary { font-weight: 700; cursor: pointer; padding-block: 4px; }
+details > :not(summary) { margin: 8px 0 0; }
+
+footer { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 0.9375rem; color: var(--muted); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 8px; }
+footer nav a { padding-block: 6px; }
+/* Phone: each table row becomes a card with its labels. */
+@media (max-width: 599px) {
+  .doc table, .doc tbody, .doc tr, .doc td { display: block; }
+  .doc thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .doc tr { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 8px 14px; margin-bottom: 12px; }
+  .doc td { border: 0; padding: 4px 0; }
+  .doc td::before { content: attr(data-label); display: block; font-weight: 700; font-size: 0.8125rem; color: var(--muted); }
+}

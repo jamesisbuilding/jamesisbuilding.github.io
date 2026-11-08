@@ -1,0 +1,35 @@
+:root {
+  color-scheme: light dark;
+  /* A warm neutral hub: no app's brand, no default blue. Links are ink, led by the underline. */
+  --bg: #F6F2EA;
+  --surface: #FCFAF6;
+  --text: #2A2421;
+  --muted: #5E554D;   /* 6.6:1 on --bg */
+  --line: #E3DCD0;
+  --link: #2A2421;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #12100E; --surface: #1C1916; --text: #F3EFE8; --muted: #B5ACA1; --line: #2F2A25; --link: #F3EFE8; }
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 1.0625rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+main { max-width: 40rem; margin: 0 auto; padding: 48px 16px; }
+h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 32px; text-wrap: balance; }
+p { text-wrap: pretty; }
+.muted { color: var(--muted); margin: 0 0 16px; }
+.apps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.app { position: relative; display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.app img { width: 64px; height: 64px; border-radius: 14px; }
+.app h2 { font-size: 1.25rem; margin: 0 0 4px; }
+/* The whole card opens the app page. */
+.app h2 a::after { content: ""; position: absolute; inset: 0; border-radius: 16px; }
+.app:hover { border-color: var(--muted); }
+.app:focus-within { outline: 3px solid var(--link); outline-offset: 2px; }
+.app h2 a:focus-visible { outline: none; }
+.app p { margin: 0 0 6px; }
+.app .status { font-size: 0.9375rem; color: var(--muted); }
+footer { max-width: 40rem; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 0.9375rem; }

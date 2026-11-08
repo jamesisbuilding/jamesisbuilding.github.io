@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lampwise: Bible App Blocker</title>
+<meta name="description" content="Lampwise keeps your social media locked until you read the Bible. Read first. Then your apps open. Coming soon to the App Store.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3ECDF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0914" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Lampwise: Read first. Then your apps open.">
+<meta property="og:description" content="Lampwise keeps your social media locked until you read the Bible. Coming soon to the App Store.">
+<meta property="og:image" content="https://jamesisbuilding.github.io/lampwise/img/icon-256.png">
+<link rel="icon" href="/lampwise/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/lampwise/img/apple-touch-icon.png">
+<link rel="preload" href="/lampwise/fonts/literata.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/lampwise/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/lampwise/media/reading-poster.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="/lampwise/landing.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/lampwise/landing.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas class="room" id="room" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="brand" href="/lampwise/"><img src="/lampwise/img/icon-256.png" alt="" width="28" height="28">Lampwise</a>
+  <nav aria-label="Lampwise">
+    <a class="nav-text" href="#how">How it works</a>
+    <a class="nav-text" href="#pricing">Pricing</a>
+    <a class="nav-text" href="#faq">Questions</a>
+    <a class="btn btn-small" href="mailto:jamesrhyspotter@gmail.com?subject=Tell%20me%20when%20Lampwise%20launches&amp;body=Please%20email%20me%20when%20Lampwise%20is%20on%20the%20App%20Store.">Get notified</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- 1 Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy scrim">
+    <h1 id="hero-title"><span class="l1">Read first.</span> <span class="l2">Then your apps open.</span></h1>
+    <p class="lede">Lampwise keeps your social media locked until you read the Bible. A few minutes in the Word, then on with your day.</p>
+    <div class="cta-row">
+      <a class="btn" href="mailto:jamesrhyspotter@gmail.com?subject=Tell%20me%20when%20Lampwise%20launches&amp;body=Please%20email%20me%20when%20Lampwise%20is%20on%20the%20App%20Store.">Get notified</a>
+      <p class="status"><span class="dot" aria-hidden="true"></span>Coming soon to the App Store. I'll email you the day it launches.</p>
+    </div>
+  </div>
+  <figure class="hero-phone">
+    <div class="phone phone-lg" data-player>
+      <div class="screen">
+        <video class="vid" muted playsinline loop preload="none" poster="/lampwise/media/reading-poster.webp" width="480" height="1044" data-autoplay
+          aria-label="Screen recording: the Today screen opens Psalm 119 in the reader, which shows Reading complete.">
+          <source data-src="/lampwise/media/reading.webm" type="video/webm">
+          <source data-src="/lampwise/media/reading.mp4" type="video/mp4">
+        </video>
+      </div>
+      <button class="vid-toggle" type="button" aria-pressed="false" aria-label="Pause video"><span aria-hidden="true"></span></button>
+    </div>
+  </figure>
+</section>
+
+<!-- 2 The problem: the morning scroll -->
+<section class="morning" aria-labelledby="morning-title">
+  <h2 id="morning-title" class="sr-only">The morning scroll</h2>
+  <ol class="morning-lines" role="list">
+    <li>The alarm goes off.</li>
+    <li>Your hand finds the phone.</li>
+    <li>Social media is already open.</li>
+    <li>Twenty minutes go by.</li>
+  </ol>
+  <p class="morning-turn scrim">You meant to read first. Most mornings, the phone gets there before you do. <strong>Lampwise puts the Bible first in line.</strong></p>
+</section>
+
+<!-- 3 How it works: sticky phone -->
+<section class="story" id="how" aria-labelledby="how-title">
+  <h2 id="how-title" class="story-title">How it works</h2>
+  <div class="story-grid">
+    <div class="story-phone" aria-hidden="true">
+      <div class="phone phone-md">
+        <div class="screen">
+          <img class="layer is-on" data-layer="0" src="/lampwise/media/02-today.webp" alt="" width="480" height="1044" loading="lazy" decoding="async">
+          <video class="layer vid" data-layer="1" muted playsinline loop preload="none" poster="/lampwise/media/reading-poster.webp" width="480" height="1044">
+            <source data-src="/lampwise/media/reading.webm" type="video/webm">
+            <source data-src="/lampwise/media/reading.mp4" type="video/mp4">
+          </video>
+          <img class="layer" data-layer="2" src="/lampwise/media/01-reading-complete.webp" alt="" width="480" height="1044" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+    <ol class="steps" role="list">
+      <li class="step" data-step="0">
+        <div class="panel lit glass">
+          <span class="step-n" aria-hidden="true">1</span>
+          <h3>Choose the apps that pull you in.</h3>
+          <p>Lampwise uses Screen Time to lock only the apps you pick, at the time you pick. It never sees what you do in them.</p>
+        </div>
+      </li>
+      <li class="step" data-step="1">
+        <div class="panel lit glass">
+          <span class="step-n" aria-hidden="true">2</span>
+          <h3>Read today's passage.</h3>
+          <p>Set how many minutes you read first. Only time with the passage on screen counts. Put the phone down and the timer waits for you.</p>
+          <div class="timer" aria-hidden="true"><span class="timer-fill"></span></div>
+        </div>
+      </li>
+      <li class="step step-peak" data-step="2">
+        <div class="panel lit glass">
+          <span class="step-n" aria-hidden="true">3</span>
+          <h3>Your apps open.</h3>
+          <p>As soon as your minutes are done, the lock lifts and you get on with your day.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4 Why it's different -->
+<section class="honest" aria-labelledby="honest-title">
+  <div class="honest-head scrim">
+    <h2 id="honest-title">Honest from the first screen.</h2>
+    <p>We show the price before you start. We call a subscription a subscription. And only minutes with the passage on screen count.</p>
+  </div>
+  <dl class="honest-list">
+    <div class="honest-item">
+      <dt>A timer you can't fool.</dt>
+      <dd>It counts only time with the passage on screen. It stops if you leave the app or the screen turns off, and carries on when you come back.</dd>
+    </div>
+    <div class="honest-item">
+      <dt>A free lock that stays free.</dt>
+      <dd>One daily lock, 6 translations, the streak and the widget cost nothing, with no time limit. You see the price of Pro, the paid plan, on the first screen, before any setup.</dd>
+    </div>
+    <div class="honest-item">
+      <dt>No guilt.</dt>
+      <dd>Lampwise never sends a message about a missed day, and never a "we miss you". The lock reminder comes once a day at most, and only if you haven't read yet. It won't ask for a rating before your first reading.</dd>
+    </div>
+    <div class="honest-item">
+      <dt>The Faithful Lock Promise.</dt>
+      <dd>On Pro Monthly, Pro Yearly or Family Yearly, if the lock fails on a paid day after your free trial, report it in 7 days or less. We fix it and add 30 days to your subscription at no cost, up to twice a year. Lifetime and the free trial get no payout. <a href="/lampwise/terms/#promise">The full terms</a>.</dd>
+    </div>
+  </dl>
+</section>
+
+<!-- 5 The reading experience -->
+<section class="reading" aria-labelledby="reading-title">
+  <div class="reading-pin">
+   <div class="reading-track">
+    <div class="reading-head scrim">
+      <h2 id="reading-title">A reader made for the first ten minutes of the day.</h2>
+      <p>Any book, any chapter. Six free translations: the Berean Standard Bible (BSB), the World English Bible (WEB), the King James Version (KJV), the American Standard Version (ASV), Reina-Valera 1909 and Bíblia Livre. Bigger text when you want it, and a dark page for early mornings.</p>
+    </div>
+    <div class="reel-wrap">
+      <ul class="reel" role="list">
+        <li><figure><div class="phone phone-sm"><div class="screen"><img src="/lampwise/media/01-reading-complete.webp" alt="Psalm 119 in the light reader, with verse numbers in ember." width="480" height="1044" loading="lazy" decoding="async"></div></div><figcaption>Psalm 119, in the Berean Standard Bible.</figcaption></figure></li>
+        <li><figure><div class="phone phone-sm"><div class="screen"><img src="/lampwise/media/03-book-and-chapter.webp" alt="The book and chapter picker, showing Genesis chapters 1 to 50." width="480" height="1044" loading="lazy" decoding="async"></div></div><figcaption>Any book, any chapter.</figcaption></figure></li>
+        <li><figure><div class="phone phone-sm"><div class="screen"><img src="/lampwise/media/04-translations.webp" alt="The translation list: BSB, WEB, KJV, ASV, RV1909 and Biblia Livre." width="480" height="1044" loading="lazy" decoding="async"></div></div><figcaption>Six translations, all free.</figcaption></figure></li>
+        <li><figure><div class="phone phone-sm"><div class="screen"><img src="/lampwise/media/06-reader-dark.webp" alt="The reader in dark mode, plum and black." width="480" height="1044" loading="lazy" decoding="async"></div></div><figcaption>Easy on the eyes before sunrise.</figcaption></figure></li>
+        <li><figure><div class="phone phone-sm" data-player><div class="screen">
+          <video class="vid" muted playsinline loop preload="none" poster="/lampwise/media/paths-poster.webp" width="480" height="1044" data-autoplay
+            aria-label="Screen recording: Reading Paths, with Gospels in 30, Psalms and Proverbs, Lent 40, Advent and Easter week.">
+            <source data-src="/lampwise/media/paths.webm" type="video/webm">
+            <source data-src="/lampwise/media/paths.mp4" type="video/mp4">
+          </video></div>
+          <button class="vid-toggle" type="button" aria-pressed="false" aria-label="Pause video"><span aria-hidden="true"></span></button>
+        </div><figcaption>Reading Paths, with Pro: Gospels in 30, Psalms and Proverbs, Lent 40, Easter week, Advent.</figcaption></figure></li>
+      </ul>
+    </div>
+   </div>
+  </div>
+</section>
+
+<!-- 6 Streaks without shame -->
+<section class="streak" aria-labelledby="streak-title">
+  <figure class="streak-phone">
+    <div class="phone phone-md" data-player>
+      <div class="screen">
+        <video class="vid" muted playsinline loop preload="none" poster="/lampwise/media/streak-poster.webp" width="480" height="1044" data-autoplay
+          aria-label="Screen recording: the Today screen with Done today, a 6 day streak, Your Morning Plan and the verse of the day.">
+          <source data-src="/lampwise/media/streak.webm" type="video/webm">
+          <source data-src="/lampwise/media/streak.mp4" type="video/mp4">
+        </video>
+      </div>
+      <button class="vid-toggle" type="button" aria-pressed="false" aria-label="Pause video"><span aria-hidden="true"></span></button>
+    </div>
+  </figure>
+  <div class="streak-copy scrim">
+    <h2 id="streak-title">A streak that keeps you honest, not anxious.</h2>
+    <p>Each morning you read adds a day. Day 1 starts with today's reading.</p>
+    <p>Miss a day and nothing shouts at you. Yesterday got away; today is a new page. With Pro, 2 Grace Days a month keep your streak when life happens.</p>
+    <p>Rather go without the lock? You can read and keep your streak with no lock at all.</p>
+  </div>
+</section>
+
+<!-- 7 Eight languages. Signature: the lamp in the room walks down the lines. -->
+<section class="tongues" aria-labelledby="tongues-title" style="--n: 8">
+  <div class="tongues-pin">
+    <h2 id="tongues-title" class="tongues-title">In 8 languages.</h2>
+    <ul class="tongues-list" role="list">
+      <li lang="en"><span>Read first. Then your apps open.</span><small lang="en">English</small></li>
+      <li lang="ko"><span>먼저 읽으면, 앱이 열려요.</span><small lang="en">Korean</small></li>
+      <li lang="pt-BR"><span>Primeiro você lê. Depois seus apps abrem.</span><small lang="en">Portuguese (Brazil)</small></li>
+      <li lang="es"><span>Primero lees. Luego tus apps se abren.</span><small lang="en">Spanish</small></li>
+      <li lang="de"><span>Erst lesen. Dann sind deine Apps wieder offen.</span><small lang="en">German</small></li>
+      <li lang="nl"><span>Eerst lezen. Dan gaan je apps open.</span><small lang="en">Dutch</small></li>
+      <li lang="fr"><span>Lis d'abord. Ensuite, tes apps s'ouvrent.</span><small lang="en">French</small></li>
+      <li lang="it"><span>Prima leggi. Poi le tue app si aprono.</span><small lang="en">Italian</small></li>
+    </ul>
+    <p class="tongues-note scrim">The whole app speaks each of these, with Reina-Valera 1909 and Bíblia Livre for Spanish and Portuguese readers.</p>
+  </div>
+</section>
+
+<!-- 8 Privacy -->
+<section class="privacy" aria-labelledby="privacy-title">
+  <div class="privacy-card panel lit glass">
+    <h2 id="privacy-title">Your reading stays on your phone.</h2>
+    <ul class="checks" role="list">
+      <li>Your answers, notes, highlights, saved verses, reading history and streak never leave your device.</li>
+      <li>iOS gives Lampwise only opaque tokens for the apps you lock, never their names.</li>
+      <li>There is no account, and Lampwise never reads your advertising ID or your location. It never asks to track you.</li>
+      <li>App events, such as a finished reading, go to Mixpanel's EU servers with no name attached.</li>
+    </ul>
+    <p><a href="/lampwise/privacy/">Read the privacy policy</a></p>
+  </div>
+</section>
+
+<!-- 9 Pricing (BR-008: the price is on the website) -->
+<section class="pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="pricing-head scrim">
+    <h2 id="pricing-title">Free and Pro</h2>
+    <p>Free is the whole lock-and-read habit, for as long as you like. Pro adds more ways to shape it.</p>
+  </div>
+  <div class="tiers">
+    <article class="tier panel lit glass" aria-labelledby="tier-free">
+      <h3 id="tier-free">Free</h3>
+      <p class="tier-price">$0 <small>No time limit</small></p>
+      <ul class="checks" role="list">
+        <li>One daily lock on the apps you choose</li>
+        <li>The reading timer, and your apps open when it's done</li>
+        <li>The emergency unlock, always</li>
+        <li>6 translations, any book and chapter</li>
+        <li>Highlights and saved verses</li>
+        <li>Font size and dark mode</li>
+        <li>The streak, the verse of the day and the widget</li>
+      </ul>
+    </article>
+    <article class="tier panel lit glass" aria-labelledby="tier-pro">
+      <h3 id="tier-pro">Pro</h3>
+      <p class="tier-lead">Everything in Free, plus:</p>
+      <ul class="checks" role="list">
+        <li>More than one lock a day</li>
+        <li>Re-lock after 15 minutes of use</li>
+        <li>Choose which apps unlock</li>
+        <li>Reading Paths</li>
+        <li>2 Grace Days a month</li>
+        <li>A Reflection Journal</li>
+      </ul>
+    </article>
+    <div class="plans-card panel lit glass">
+      <h3 id="plans-title">Pro plans</h3>
+      <ul class="plans" role="list" aria-labelledby="plans-title">
+        <li><span class="plan-name">Pro Monthly<small>7 days free, then renews each month</small></span><span class="plan-price">$7.99<small>a month</small></span></li>
+        <li><span class="plan-name">Pro Yearly<small>7 days free, then renews each year</small></span><span class="plan-price">$49.99<small>a year</small></span></li>
+        <li><span class="plan-name">Family Yearly<small>You and up to 5 family members with Family Sharing. 7 days free, then renews each year</small></span><span class="plan-price">$79.99<small>a year</small></span></li>
+        <li><span class="plan-name">Lifetime<small>No trial. Pay once; it never renews</small></span><span class="plan-price">$129.99<small>one time</small></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pricing-fine scrim">
+    <p>We remind you 2 days before a trial charge. A subscription renews automatically until you cancel. To stop the next charge, cancel at least 24 hours before the trial or the period ends. In Lampwise, tap “Cancel subscription” in Settings. Subscriptions come with the <a href="/lampwise/terms/#promise">Faithful Lock Promise</a>.</p>
+    <p>Prices shown in US dollars; your local App Store price may differ. <a href="/lampwise/terms/">The full terms</a>.</p>
+  </div>
+</section>
+
+<!-- 10 FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">Questions</h2>
+  <div class="faq-list">
+    <details>
+      <summary>How does the lock work?</summary>
+      <p>Choose the apps that pull you in, set a time, and set how many minutes you read first. At that time each day, those apps lock. Read, and they open as soon as your minutes are done. Lampwise uses Screen Time, locks only the apps you choose, and never sees what you do in them.</p>
+    </details>
+    <details>
+      <summary>What if I need my phone right now?</summary>
+      <p>Use the emergency unlock. It is always there, on the Free tier too. Emergency unlocks never cost anything and have no limit. They do not count as a reading.</p>
+    </details>
+    <details>
+      <summary>What is free?</summary>
+      <p>The whole habit: one daily lock, the reading timer and the emergency unlock, with no time limit. <a href="#pricing">See everything in Free</a>.</p>
+    </details>
+    <details>
+      <summary>What does Pro add, and what does it cost?</summary>
+      <p>More locks a day, re-lock, Reading Paths, Grace Days and a Reflection Journal. Pro Monthly is $7.99 a month, Pro Yearly $49.99 a year and Family Yearly $79.99 a year, each with a 7-day free trial. Lifetime is $129.99, paid once. Prices in US dollars. <a href="#pricing">See the plans</a>.</p>
+    </details>
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>No. Lampwise never asks you to make an account or sign in.</p>
+    </details>
+    <details>
+      <summary>When can I get it?</summary>
+      <p>Lampwise is coming soon to the App Store. <a href="mailto:jamesrhyspotter@gmail.com?subject=Tell%20me%20when%20Lampwise%20launches&amp;body=Please%20email%20me%20when%20Lampwise%20is%20on%20the%20App%20Store.">Get notified</a> and I'll email you the day it launches. Or write to jamesrhyspotter@gmail.com.</p>
+    </details>
+  </div>
+  <p class="faq-more">More answers on the <a href="/lampwise/support/">support page</a>. A person answers every email.</p>
+</section>
+
+<!-- 11 Final CTA -->
+<section class="close" aria-labelledby="close-title">
+  <div class="close-card panel lit glass">
+    <img class="close-icon" src="/lampwise/img/icon-256.png" alt="The Lampwise icon: an open padlock with a gilt flame." width="88" height="88" loading="lazy">
+    <blockquote>
+      <p id="close-title">“Your word is a lamp to my feet and a light to my path.”</p>
+      <cite>Psalm 119:105</cite>
+    </blockquote>
+    <p class="close-status">Lampwise is coming soon to the App Store.</p>
+    <a class="btn" href="mailto:jamesrhyspotter@gmail.com?subject=Tell%20me%20when%20Lampwise%20launches&amp;body=Please%20email%20me%20when%20Lampwise%20is%20on%20the%20App%20Store.">Get notified</a>
+    <p class="close-mail">Or write to jamesrhyspotter@gmail.com</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <nav aria-label="Footer"><a href="/">All apps</a><a href="/lampwise/support/">Support</a><a href="/lampwise/privacy/">Privacy policy</a><a href="/lampwise/terms/">Terms of use</a></nav>
+  <p>Lampwise is made by James Potter. <a href="mailto:jamesrhyspotter@gmail.com">jamesrhyspotter@gmail.com</a></p>
+</footer>
+</body>
+</html>
